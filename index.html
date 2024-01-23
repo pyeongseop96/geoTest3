@@ -46,6 +46,14 @@ let three = document.getElementById("3");
 three.innerText=crd.accuracy;
 })
 
-
+setInterval(()=>{
+  console.log(111);
+  let one = document.getElementById("1");
+one.innerText=crd.latitude;
+let two = document.getElementById("2");
+two.innerText=crd.longitude;
+let three = document.getElementById("3");
+three.innerText=crd.accuracy;
+},1000);
 </script>
 </html>
