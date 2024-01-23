@@ -9,7 +9,7 @@
   <span id="1">11</span>
   <span id="2">22</span>
   <span id="3">33</span>
-  <button onclick="a()">click</button>
+  <button id="b">click</button>
 </body>
 <script>
 
@@ -37,13 +37,15 @@ function error(err) {
 navigator.geolocation.getCurrentPosition(success, error, options);
 navigator.geolocation.watchPosition(success, error, options);
 
-function a(){
-let one = document.getElementById("1");
+document.getElementById("b").addEventListener('click', function(){
+  let one = document.getElementById("1");
 one.innerText=crd.latitude;
 let two = document.getElementById("2");
 two.innerText=crd.longitude;
 let three = document.getElementById("3");
 three.innerText=crd.accuracy;
-}
+})
+
+
 </script>
 </html>
