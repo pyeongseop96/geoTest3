@@ -6,9 +6,15 @@
   <title>Document</title>
 </head>
 <body>
-  123
+  <span id="1">11</span>
+  <span id="2">22</span>
+  <span id="3">33</span>
+  <button onclick="a()">click</button>
 </body>
 <script>
+
+  let crd;
+
   const options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -16,7 +22,7 @@
 };
 
 function success(pos) {
-  const crd = pos.coords;
+  crd = pos.coords;
 
   console.log("Your current position is:");
   console.log(`Latitude : ${crd.latitude}`);
@@ -31,6 +37,13 @@ function error(err) {
 navigator.geolocation.getCurrentPosition(success, error, options);
 navigator.geolocation.watchPosition(success, error, options);
 
-
+function a(){
+let one = document.getElementById("1");
+one.innerText=crd.latitude;
+let two = document.getElementById("2");
+two.innerText=crd.longitude;
+let three = document.getElementById("3");
+three.innerText=crd.accuracy;
+}
 </script>
 </html>
