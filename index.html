@@ -12,6 +12,9 @@
   <span id="2">22</span><br/>
   <span>최대오차 : </span>
   <span id="3">33</span><br/>
+  <span>버튼 누른 횟수 : </span>
+  <span id="4">0</span><br/>
+  <button id="b">JS 작동 확인</button>
 </body>
 <script>
 
@@ -40,12 +43,8 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 navigator.geolocation.watchPosition(success, error, options);
 
 document.getElementById("b").addEventListener('click', function(){
-  let one = document.getElementById("1");
-one.innerText=crd.latitude;
-let two = document.getElementById("2");
-two.innerText=crd.longitude;
-let three = document.getElementById("3");
-three.innerText=crd.accuracy;
+  let four = document.getElementById("4");
+  four.innerText=(Number)(four.innerText)+1;
 })
 
 setInterval(()=>{
