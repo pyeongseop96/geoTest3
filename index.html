@@ -6,11 +6,12 @@
   <title>Document</title>
 </head>
 <body>
-  <span id="1">11</span>
-  <span id="2">22</span>
-  <span id="3">33</span>
-  <span id="4">44</span>
-  <button id="b">click</button>
+  <span>위도 : </span>
+  <span id="1">11</span><br/>
+  <span>경도 : </span>
+  <span id="2">22</span><br/>
+  <span>최대오차 : </span>
+  <span id="3">33</span><br/>
 </body>
 <script>
 
@@ -55,8 +56,6 @@ let two = document.getElementById("2");
 two.innerText=crd.longitude;
 let three = document.getElementById("3");
 three.innerText=crd.accuracy;
-let four = document.getElementById("4");
-three.innerText=99999;
 },1000);
 </script>
 </html>
